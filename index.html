@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header_container">
+      <div class="hamburger_btn_and_logo">
+        <div class="mobile-menu">
+          <div class="open_btn" id="btnOpen" onclick="openBtn()"><img src="images/icon-menu.svg" alt="hamburger_button">
+          </div>
+          <div class="close_btn" id="btnClose" onclick="closeBtn()"> <img src="images/icon-close.svg"
+              alt="close_button"> </div>
+        </div>
+        <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+        <div class="nav_menu">
+          <div class="overlay"></div>
+          <ul>
+            <a href="#"> Collections</a>
+            <a href="#"> Men</a>
+            <a href="#"> Women</a>
+            <a href="#"> About</a>
+            <a href="#">Contact</a>
+          </ul>
+        </div>
+      </div>
+      <div class="cart_avatar">
+        <div class="cart">
+          <h5 class="cartItems">0</h5>
+          <img src="images/icon-cart.svg" alt="cart_svg">
+        </div>
+        <div class="avatar">
+          <img src="images/image-avatar.png" alt="avatar_svg">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="nav-price">
+      <h4 id="cart-text">Cart</h4>
+      <hr>
+      <div class="price-container">
+        <div class="sneaker-photo">
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+        </div>
+        <div class="calculatedValue">
+          <h6 class="replaceText">Fall Limited Edition Sneakers</h6>
+          <p class="priceCalucation"></p>
+        </div>
+        <div class="icon"><img src="images/icon-delete.svg" alt=""></div>
+      </div>
+      <button class="myBtn">Checkout</button>
+    </div>
+
+  </div>
+
+  <main>
+
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+      <div class="swiper-wrapper swiper-container">
+        <div class="swiper-slide" id="hero-image">
+          <img src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide" id="hero-image">
+          <img src="images/image-product-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide" id="hero-image">
+          <img src="images/image-product-3.jpg" alt="">
+        </div>
+        <div class="swiper-slide" id="hero-image">
+          <img src="images/image-product-4.jpg" alt="">
+        </div>
+      </div>
+      <div class="button_container">
+        <div class="button-next">
+          <img src="images/icon-previous.svg" alt="">
+        </div>
+        <div class="button-prev">
+          <img src="images/icon-next.svg" alt="">
+        </div>
+      </div>
+
+      <!-- thumbnail -->
+      <div class="swiper mySwiper" id="thumbnail">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="thumbnail-image">
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div class="swiper-slide" id="thumbnail-image">
+            <img src="images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div class="swiper-slide" id="thumbnail-image">
+            <img src="images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div class="swiper-slide" id="thumbnail-image">
+            <img src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text_container">
+      <h3> Sneaker Company</h3>
+      <h1> Fall Limited Edition Sneakers</h1>
+      <p> These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="price_container">
+        <div class="original_price">
+          <h2>$125.00 <span class="off-price">50%</span> </h2>
+        </div>
+        <div class="discount_price">
+          <h2>$250.00</h2>
+        </div>
+      </div>
+      <div class="counter-cart-btn">
+        <div class="counter">
+          <div class="minus_image">
+            <img src="images/icon-minus.svg" alt="minus_sign">
+          </div>
+          <div class="plus_minus">0</div>
+          <div class="plus_image">
+            <img src="images/icon-plus.svg" alt="plus_sign">
+          </div>
+        </div>
+        <div class="cart_btn">
+          <div class="cart">
+            <svg width="22" height="20">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill-rule="nonzero" />
+            </svg>
+          </div>
+          <a href="#">Add to cart</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
